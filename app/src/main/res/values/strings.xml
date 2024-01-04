@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">HeyGongCCamera</string>
+
+    <!--Terms-->
+    <string name="title_permission_guide">앱 사용 권한 안내</string>
+    <string name="description_permission_guide">편리하고 안전한 헤이공씨 앱 사용을 위해 \n다음과 같은 권한 허용이 필요합니다.</string>
+    <string name="permission_camera">카메라 필수</string>
+    <string name="description_camera">스트리밍, 녹화 등 카메라 기능 사용</string>
+    <string name="permission_microphone">마이크 필수</string>
+    <string name="description_microphone">스트리밍, 녹화 등 카메라 기능 사용</string>
+    <string name="permission_description"><![CDATA[* 접근 권한 변경 방법: 설정 > 헤이공씨 > 권한 ON/OFF\n* 접근 권한을 허용하지 않는 경우 서비스 이용이 어려울 수 있습니다.]]></string>
+    <string name="btn_label_confim">확인</string>
+</resources>
