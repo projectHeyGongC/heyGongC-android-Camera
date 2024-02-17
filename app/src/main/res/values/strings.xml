@@ -10,4 +10,7 @@
     <string name="description_microphone">스트리밍, 녹화 등 카메라 기능 사용</string>
     <string name="permission_description"><![CDATA[* 접근 권한 변경 방법: 설정 > 헤이공씨 > 권한 ON/OFF\n* 접근 권한을 허용하지 않는 경우 서비스 이용이 어려울 수 있습니다.]]></string>
     <string name="btn_label_confim">확인</string>
+    <string name="cd_white_qr_background">QR코드를 감싼 흰색 배경 이미지</string>
+    <string name="cf_qr_code_image">QR코드 이미지</string>
+    <string name="guide_scan_qr_code">빈방 앱으로 QR코드를\n스캔해주세요.</string>
 </resources>
