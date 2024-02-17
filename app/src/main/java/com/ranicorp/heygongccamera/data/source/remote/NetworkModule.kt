@@ -1,6 +1,8 @@
 package com.ranicorp.heygongccamera.data.source.remote
 
 import com.google.gson.GsonBuilder
+import com.ranicorp.heygongccamera.BuildConfig
+import com.ranicorp.heygongccamera.data.source.local.LocalDataStoreManager
 import com.ranicorp.heygongccamera.data.source.remote.apicalladapter.ApiCallAdapterFactory
 import dagger.Module
 import dagger.Provides
@@ -16,6 +18,12 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
+
+    @Singleton
+    @Provides
+    fun provideHeaderInterceptor(localDataStoreManager: LocalDataStoreManager): HeaderInterceptor {
+        return HeaderInterceptor(localDataStoreManager)
+    }
 
     @Singleton
     @Provides
@@ -55,7 +63,7 @@ object NetworkModule {
         gsonConverterFactory: GsonConverterFactory
     ): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https:/13.125.159.97/")
+            .baseUrl(BuildConfig.BASE_URL)
             .client(client)
             .addConverterFactory(gsonConverterFactory)
             .addCallAdapterFactory(ApiCallAdapterFactory.create())

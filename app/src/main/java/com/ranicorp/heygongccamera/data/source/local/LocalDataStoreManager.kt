@@ -2,6 +2,7 @@ package com.ranicorp.heygongccamera.data.source.local
 
 import android.content.Context
 import androidx.datastore.preferences.preferencesDataStore
+import com.ranicorp.heygongccamera.util.Constants.ACCESS_TOKEN
 import com.ranicorp.heygongccamera.util.Constants.LOCAL_PREFERENCES
 import com.ranicorp.heygongccamera.util.Constants.TERMS_AGREED_STATE
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -16,5 +17,11 @@ class LocalDataStoreManager @Inject constructor(@ApplicationContext context: Con
 
     suspend fun setLocalTermsAgreedState(agreedState: Boolean) {
         saveValue(TERMS_AGREED_STATE, agreedState)
+    }
+
+    suspend fun getAccessToken() = getStringValue(ACCESS_TOKEN)
+
+    suspend fun setAccessToken(accessToken: String) {
+        saveValue(ACCESS_TOKEN, accessToken)
     }
 }
