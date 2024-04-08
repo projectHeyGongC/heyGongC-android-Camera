@@ -77,7 +77,10 @@ dependencies {
     //Firebase
     implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
     implementation("com.google.firebase:firebase-analytics-ktx")
+    implementation("com.google.firebase:firebase-messaging:23.4.1")
 }
+
+apply plugin: 'com.google.gms.google-services'
 
 kapt {
     correctErrorTypes true

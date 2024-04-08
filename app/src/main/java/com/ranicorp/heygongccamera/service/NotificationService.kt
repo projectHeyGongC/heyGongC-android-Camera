@@ -1,4 +1,4 @@
-package com.ranicorp.heygongccamera.notification
+package com.ranicorp.heygongccamera.service
 
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
