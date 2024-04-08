@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "1082940949723",
+    "project_id": "heygongc-511c4",
+    "storage_bucket": "heygongc-511c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082940949723:android:391c87f64b7742196538fe",
+        "android_client_info": {
+          "package_name": "com.heyGongC.heyGongC"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1082940949723-o5afc4g2aao21jiv6lsk2vuluf1dr7io.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAy_Fc9qomk3d9QKaR-W-3Ywea7FccqJQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1082940949723-i2vb2h7sadclb1p3ubvmo1e657m86uo6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1082940949723-6b3krunts13d3c5saqdb6a8r04ae5c7k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.heyGongC.heyGongC"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082940949723:android:7bf1083c86aedab76538fe",
+        "android_client_info": {
+          "package_name": "com.heyGongC.heyGongCCamera"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1082940949723-o5afc4g2aao21jiv6lsk2vuluf1dr7io.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAy_Fc9qomk3d9QKaR-W-3Ywea7FccqJQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1082940949723-i2vb2h7sadclb1p3ubvmo1e657m86uo6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1082940949723-6b3krunts13d3c5saqdb6a8r04ae5c7k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.heyGongC.heyGongC"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
