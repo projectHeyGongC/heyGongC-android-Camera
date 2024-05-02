@@ -1,12 +1,34 @@
 package com.heyGongC.heyGongCCamera
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.heyGongC.heyGongCCamera.util.Constants.ACTION
+import com.heyGongC.heyGongCCamera.util.Constants.CONTENT
+import com.heyGongC.heyGongCCamera.util.Constants.REMOTE_EXECUTION
+import com.heyGongC.heyGongCCamera.util.Constants.REMOTE_SHUTDOWN
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         moveToFirstScreen()
+        handleNotificationIntent(intent)
+    }
+
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        handleNotificationIntent(intent)
+    }
+
+    private fun handleNotificationIntent(intent: Intent?) {
+        val action = intent?.getStringExtra(ACTION)
+        val content = intent?.getStringExtra(CONTENT)
+        when {
+            action == REMOTE_EXECUTION -> {}
+            action == REMOTE_SHUTDOWN -> {
+                finish()
+            }
+        }
     }
 
     private fun moveToFirstScreen() {
