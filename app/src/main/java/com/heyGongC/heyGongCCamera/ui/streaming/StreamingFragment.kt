@@ -1,21 +1,20 @@
-package com.heyGongC.heyGongCCamera.ui.qr
+package com.heyGongC.heyGongCCamera.ui.streaming
 
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
 import android.view.View
-import androidx.fragment.app.Fragment
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.messaging.FirebaseMessaging
 import com.google.zxing.BarcodeFormat
+import com.heyGongC.heyGongCCamera.R
 import com.journeyapps.barcodescanner.BarcodeEncoder
-import com.heyGongC.heyGongCCamera.databinding.FragmentQrBinding
+import com.heyGongC.heyGongCCamera.ui.BaseFragment
 
-class QrFragment : Fragment() {
+class StreamingFragment : BaseFragment() {
 
-    private var _binding: FragmentQrBinding? = null
-    private val binding get() = _binding!!
+    override val layoutId = R.layout.fragment_streaming
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

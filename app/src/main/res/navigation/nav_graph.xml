@@ -2,12 +2,12 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/qrFragment">
+    app:startDestination="@id/streamingFragment">
 
     <fragment
-        android:id="@+id/qrFragment"
-        android:name="com.heyGongC.heyGongCCamera.ui.qr.QrFragment"
-        android:label="QrFragment" />
+        android:id="@+id/streamingFragment"
+        android:name="com.heyGongC.heyGongCCamera.ui.streaming.StreamingFragment"
+        android:label="StreamingFragment" />
     <fragment
         android:id="@+id/termsFragment"
         android:name="com.heyGongC.heyGongCCamera.ui.terms.TermsFragment"

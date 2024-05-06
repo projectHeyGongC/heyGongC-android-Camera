@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_scan_qr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="iv_background, iv_qr_code, tv_qr_quide" />
+
+        <ImageView
+            android:id="@+id/iv_background"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:contentDescription="@string/cd_white_qr_background"
+            android:src="@drawable/bg_white_r8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_qr_code"
+            android:layout_width="148dp"
+            android:layout_height="148dp"
+            android:contentDescription="@string/cf_qr_code_image"
+            android:padding="20dp"
+            app:layout_constraintEnd_toEndOf="@id/iv_background"
+            app:layout_constraintStart_toStartOf="@id/iv_background"
+            app:layout_constraintTop_toTopOf="@id/iv_background" />
+
+        <TextView
+            android:id="@+id/tv_qr_quide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lineHeight="16sp"
+            android:text="@string/guide_scan_qr_code"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@id/iv_background"
+            app:layout_constraintStart_toStartOf="@id/iv_background"
+            app:layout_constraintTop_toBottomOf="@id/iv_qr_code" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
