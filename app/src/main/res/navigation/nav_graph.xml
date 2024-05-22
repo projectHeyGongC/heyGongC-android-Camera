@@ -7,7 +7,11 @@
     <fragment
         android:id="@+id/streamingFragment"
         android:name="com.heyGongC.heyGongCCamera.ui.streaming.StreamingFragment"
-        android:label="StreamingFragment" />
+        android:label="StreamingFragment" >
+        <action
+            android:id="@+id/action_streamingFragment_to_termsFragment"
+            app:destination="@id/termsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/termsFragment"
         android:name="com.heyGongC.heyGongCCamera.ui.terms.TermsFragment"

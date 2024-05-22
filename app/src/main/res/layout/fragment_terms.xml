@@ -140,12 +140,13 @@
         app:layout_constraintTop_toBottomOf="@id/third_divider" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_confirm"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginHorizontal="35dp"
         android:layout_marginBottom="100dp"
-        android:background="@drawable/selector_register_device"
+        android:background="#FFC000"
         android:text="@string/btn_label_confim"
         android:textColor="@color/black"
         android:textSize="13sp"

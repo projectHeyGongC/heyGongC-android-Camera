@@ -1,10 +1,37 @@
 package com.heyGongC.heyGongCCamera.ui.terms
 
-class TermsFragment {
-}
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.heyGongC.heyGongCCamera.databinding.FragmentTermsBinding
 
-//MainActivity - Datastore 정보 읽고 (Terms 동의 여부) Terms Fragment (- QR Fragment) or Camera Fragment !!
-//Datastore 정보 읽고 (Terms 동의 및 QR 스캔 여부) QR Fragment or (이 전에 서버와 통신이 필요할 듯)Camera Fragment !!
-//Datastore 만들기
-//Terms Fragment에서 Agree하면 hasAgreed 값으로 저장
-//저장 true / false에 따라 MainActivity에서 어디로 갈지 정하기 !!
+class TermsFragment : Fragment() {
+
+    private var _binding: FragmentTermsBinding? = null
+    private val binding: FragmentTermsBinding
+        get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentTermsBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.btnConfirm.setOnClickListener {
+            findNavController().navigateUp()
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+}
