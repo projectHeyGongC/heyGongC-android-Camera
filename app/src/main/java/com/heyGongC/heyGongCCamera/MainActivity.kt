@@ -40,10 +40,18 @@ class MainActivity : AppCompatActivity() {
     private fun handleNotificationIntent(intent: Intent?) {
         val action = intent?.getStringExtra(ACTION)
         val content = intent?.getStringExtra(CONTENT)
-        when {
-            action == REMOTE_EXECUTION -> {}
-            action == REMOTE_SHUTDOWN -> {
+        when (action) {
+            REMOTE_EXECUTION -> {}
+            REMOTE_SHUTDOWN -> {
                 finish()
+            }
+
+            SOUND_SENSING -> {
+                mainViewModel.handleSoundSensing(content)
+            }
+
+            FLASH -> {
+                mainViewModel.handleFlash(content)
             }
         }
     }
@@ -54,7 +62,8 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             mainViewModel.hasLocalAccessToken.collectLatest {
                 if (!it) {
-                    val action = StreamingFragmentDirections.actionStreamingFragmentToTermsFragment()
+                    val action =
+                        StreamingFragmentDirections.actionStreamingFragmentToTermsFragment()
                     navController?.navigate(action)
                 }
             }

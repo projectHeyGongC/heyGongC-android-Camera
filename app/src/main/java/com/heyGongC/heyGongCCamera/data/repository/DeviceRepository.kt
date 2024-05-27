@@ -62,4 +62,9 @@ class DeviceRepository @Inject constructor(
     suspend fun hasLocalAccessToken(): Flow<Boolean> = flow {
         emit(dataStoreManager.getAccessToken().isNotEmpty())
     }
+
+    suspend fun saveLocalAccessToken(accessToken: String): Flow<Boolean> = flow {
+        dataStoreManager.setAccessToken(accessToken)
+        emit(true)
+    }
 }

@@ -9,4 +9,8 @@ object Constants {
     const val CONTENT = "content"
     const val REMOTE_EXECUTION = "REMOTE_EXECUTION"
     const val REMOTE_SHUTDOWN = "REMOTE_SHUTDOWN"
+    const val SOUND_SENSING  = "SOUND_SENSING"
+    const val FLASH = "FLASH"
+    const val ON = "ON"
+    const val OFF = "OFF"
 }
